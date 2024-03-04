@@ -57,20 +57,14 @@ class pi {
 
 class exercise1 {
     public static void main(String[] args) {
-        int nota1 = 2, nota2 = 4, nota4 = 5, nota5 = 3;
-
-        System.out.println((nota1 + nota2 + nota4 + nota5) / 4);
+        int nota1 = 2, nota2 = 4, nota3 = 5, nota4 = 3;
+        System.out.println((nota1 + nota2 + nota3 + nota4) / 4);
     }
 }
 
 class exercise2 {
     public static void main(String[] args) {
-        char let1 = 'H';
-        char let2 = 'E';
-        char let3 = 'N';
-        char let4 = 'R';
-        char let5 = 'I';
-
+        char let1 = 'H', let2 = 'E', let3 = 'N', let4 = 'R', let5 = 'I';
         String nomeCompleto = "" + let1 + let2 + let3 + let4 + let5;
 
         System.out.println(nomeCompleto);
@@ -93,10 +87,99 @@ class exercise3 {
         System.out.println("Insira um parâmetro");
         double A = entrada2.nextDouble();
 
-        String conca = "" + nome + nome1;
+        String conca = "" + nome + " " + nome1;
         double conca1 = A + B;
 
         System.out.println(conca);
         System.out.println(conca1);
+    }
+}
+
+class desafio {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("insira um numero: ");
+        int numero = entrada.nextInt();
+
+        System.out.println("O seu sucessor é " + (numero + 1));
+        System.out.println("O seu antecessorr é " + (numero - 1));
+    }
+}
+
+class desafio2 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("insira um valor: ");
+        double numero = entrada.nextDouble();
+
+        double valor = numero * 0.15;
+
+        System.out.println("O valor com reajuste e " + (numero + valor));
+    }
+}
+
+class desafio3 {
+    public static void main(String[] args) {
+        Scanner preco = new Scanner(System.in);
+        System.out.println("Digite o preço");
+        double numero = preco.nextDouble();
+
+        Scanner nome = new Scanner(System.in);
+        System.out.println("Digite seu nome");
+        String nome1 = nome.nextLine();
+
+        double valor = numero * 0.85;
+        System.out.println(nome1);
+        System.out.println("o valor é " + (valor + numero));
+    }
+}
+
+class desafio4 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o valor");
+        double numero = entrada.nextDouble();
+
+        System.out.println("Digite o valor");
+        double numero2 = entrada.nextDouble();
+
+        System.out.println("a soma é " + (numero + numero2));
+        System.out.println("a subtração é " + (numero - numero2));
+        System.out.println("a multiplicação é " + (numero * numero2));
+        System.out.println("a divisão é " + (numero / numero2));
+    }
+}
+
+class desafio5 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o valor");
+        double C = entrada.nextDouble();
+
+        double F = C * 1.8 + 32, K = C + 273.15, Re = C * 0.8, Ra = C * 1.8 + 32 + 459.67;
+
+        System.out.println("Celsius em Fahrenheit é " + F);
+        System.out.println("Celsius em Kelvin é " + K);
+        System.out.println("Celsius em Réaumur é " + Re);
+        System.out.println("Celsius em Rankine é " + Ra);
+
+    }
+}
+
+class cavalo {
+    public static void main(String[] args) {
+        Scanner massa = new Scanner(System.in);
+        System.out.println("escreva um número de KG");
+        double m = massa.nextDouble();
+
+        System.out.println("escreva uma altura");
+        double h = massa.nextDouble();
+
+        System.out.println("escreva um tempo");
+        double t = massa.nextDouble();
+
+        double cavalos = (m * h / t) / 745.6999;
+
+        System.out.println("levaria " + cavalos + " cavalos para levantar essa massa");
     }
 }
