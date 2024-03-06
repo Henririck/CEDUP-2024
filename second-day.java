@@ -7,13 +7,19 @@ class quickstart {
         System.out.println("o numero para o antecessor e sucessor: ");
         double num = entrada.nextInt();
 
+        entrada.close();
+
         Scanner entrada2 = new Scanner(System.in);
         System.out.println("o numero para o antecessor e sucessor: ");
         double num1 = entrada2.nextInt();
 
+        entrada2.close();
+
         Scanner entrada3 = new Scanner(System.in);
         System.out.println("o numero para o antecessor e sucessor: ");
         double num2 = entrada3.nextInt();
+
+        entrada3.close();
 
         System.out.println("o numero antecessor é: " + (num1 + num + num2) / 3);
 
@@ -25,6 +31,8 @@ class xuxa {
         Scanner entrada = new Scanner(System.in);
         System.out.println("insira um numero ");
         int num = entrada.nextInt();
+
+        entrada.close();
 
         if (num >= 0) {
             System.out.println(num + " patinhos foram passear ");
@@ -77,8 +85,12 @@ class exercise3 {
         System.out.println("insira um nome: ");
         String nome = entrada.nextLine();
 
+        entrada.close();
+
         System.out.println("Insira um sobrenome");
         String nome1 = entrada.nextLine();
+
+        nome1.close();
 
         Scanner entrada2 = new Scanner(System.in);
         System.out.println("insira um parâmetro: ");
@@ -86,6 +98,8 @@ class exercise3 {
 
         System.out.println("Insira um parâmetro");
         double A = entrada2.nextDouble();
+
+        entrada2.close();
 
         String conca = "" + nome + " " + nome1;
         double conca1 = A + B;
@@ -101,6 +115,8 @@ class desafio {
         System.out.println("insira um numero: ");
         int numero = entrada.nextInt();
 
+        entrada.close();
+
         System.out.println("O seu sucessor é " + (numero + 1));
         System.out.println("O seu antecessorr é " + (numero - 1));
     }
@@ -111,6 +127,8 @@ class desafio2 {
         Scanner entrada = new Scanner(System.in);
         System.out.println("insira um valor: ");
         double numero = entrada.nextDouble();
+
+        entrada.close();
 
         double valor = numero * 0.15;
 
@@ -124,9 +142,13 @@ class desafio3 {
         System.out.println("Digite o preço");
         double numero = preco.nextDouble();
 
+        preco.close();
+
         Scanner nome = new Scanner(System.in);
         System.out.println("Digite seu nome");
         String nome1 = nome.nextLine();
+
+        nome.close();
 
         double valor = numero * 0.85;
         System.out.println(nome1);
@@ -143,6 +165,8 @@ class desafio4 {
         System.out.println("Digite o valor");
         double numero2 = entrada.nextDouble();
 
+        entrada.close();
+
         System.out.println("a soma é " + (numero + numero2));
         System.out.println("a subtração é " + (numero - numero2));
         System.out.println("a multiplicação é " + (numero * numero2));
@@ -153,15 +177,15 @@ class desafio4 {
 class desafio5 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite o valor");
+        System.out.println("Digite a temperatura em Celsius21");
         double C = entrada.nextDouble();
+
+        entrada.close();
 
         double F = C * 1.8 + 32, K = C + 273.15, Re = C * 0.8, Ra = C * 1.8 + 32 + 459.67;
 
-        System.out.println("Celsius em Fahrenheit é " + F);
-        System.out.println("Celsius em Kelvin é " + K);
-        System.out.println("Celsius em Réaumur é " + Re);
-        System.out.println("Celsius em Rankine é " + Ra);
+        System.out.println("Celsius em Fahrenheit é " + F + "\n" + "Celsius em Kelvin é " + K + "\n"
+                + "Celsius em Réaumur é " + Re + "\n" + "Celsius em Rankine é " + Ra);
 
     }
 }
@@ -178,8 +202,97 @@ class cavalo {
         System.out.println("escreva um tempo");
         double t = massa.nextDouble();
 
+        massa.close();
+
         double cavalos = (m * h / t) / 745.6999;
 
         System.out.println("levaria " + cavalos + " cavalos para levantar essa massa");
+    }
+}
+
+class idades {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite sua idade em anos");
+        double A = entrada.nextDouble();
+
+        System.out.println("Digite sua idade em meses");
+        double B = entrada.nextDouble();
+
+        System.out.println("Digite sua idade em dias");
+        double dias = entrada.nextDouble();
+
+        entrada.close();
+
+        double anos = A * 365;
+        double mes = B * 30;
+
+        System.out.println("sua idade em dias é " + (anos + mes + dias));
+    }
+}
+
+class triangle {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Escreva uma altura para o triangulo");
+        double A = entrada.nextDouble();
+
+        System.out.println("Escreva uma base para o triangulo");
+        double B = entrada.nextDouble();
+
+        entrada.close();
+
+        double retangle = A * B;
+
+        System.out.println("a área do retângulo é: " + retangle);
+
+    }
+}
+
+class pscina {
+    public static void main(String[] args) {
+        double comprimento, profundidade, largura, preco;
+
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("escreva o comprimento");
+        comprimento = entrada.nextDouble();
+
+        System.out.println("escreva o profundidade");
+        profundidade = entrada.nextDouble();
+
+        System.out.println("escreva o largura");
+        largura = entrada.nextDouble();
+
+        entrada.close();
+
+        preco = 100 * (largura * altura * comprimento);
+
+        System.out.println("o preço ficaria " + preco);
+    }
+}
+
+// Douglas
+
+class Douglas {
+    public static void main(String[] args) {
+        System.out.println("Ola");
+        System.out.println("Douglas");
+    }
+}
+
+class Douglas2 {
+    public static void main(String[] args) {
+        int numero = 70;
+        int numero2 = 50;
+        System.out.println(numero + numero2);
+
+    }
+}
+
+class Douglas3 {
+    public static void main(String[] args) {
+        double numero = 20;
+        double numero2 = 25;
+        System.out.println(numero / numero2);
     }
 }
