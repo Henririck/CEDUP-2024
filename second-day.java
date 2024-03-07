@@ -271,6 +271,34 @@ class pscina {
     }
 }
 
+class calculadora {
+    public static void main(String[] args) {
+        Scanner entrada2 = new Scanner(System.in);
+        System.out.println("escreva um número");
+        double num1 = entrada2.nextDouble();
+
+        System.out.println("escreva um número");
+        double num2 = entrada2.nextDouble();
+
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("digite 1 para soma, 2 para subtração, 3 para multiplicação ou 4 para divisão");
+        int escolha = entrada.nextInt();
+
+        switch (escolha <= 4) {
+            case 1:
+                System.out.println("A soma é: " + (num1 + num2));
+            case 2:
+                System.out.println("A subtração é: " + (num1 - num2));
+            case 3:
+                System.out.println("A multiplicação é: " + (num1 * num2));
+            case 4:
+                System.out.println("A divisão é: " + (num1 / num2));
+            default:
+                System.out.println("escolha invalida");
+        }
+
+    }
+}
 // Douglas
 
 class Douglas {
@@ -294,5 +322,68 @@ class Douglas3 {
         double numero = 20;
         double numero2 = 25;
         System.out.println(numero / numero2);
+    }
+}
+
+class Douglas4 {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+class exercicio12 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Escreva um número");
+        double numero = entrada.nextDouble();
+
+        if (numero >= 0 && numero == 0) {
+            System.out.println("o número é positivo ou igual a zero");
+        } else {
+            System.out.println("o número é negativo");
+        }
+    }
+}
+
+class exercicio12mais1 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Escreva um número para ver se ele é par ou impar");
+        int numero = entrada.nextInt();
+        if (numero % 2 == 0) {
+            System.out.println("o número é par");
+        } else {
+            System.out.println("o número é impar");
+        }
+    }
+}
+
+class exercicio14 {
+    public static void main(String[] args) {
+        int fatorial = 1;
+
+        for (int n = 1; n <= 10; n++) {
+            fatorial *= n;
+            System.out.println(fatorial + " ");
+        }
+    }
+}
+
+class exercicio15 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Escreva um número para ver se ele é primo");
+        int numero = entrada.nextInt();
+
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            } else {
+                System.out.println("o número é primo");
+            }
+        }
+
     }
 }
