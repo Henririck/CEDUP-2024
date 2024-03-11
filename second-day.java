@@ -284,15 +284,24 @@ class calculadora {
         System.out.println("digite 1 para soma, 2 para subtração, 3 para multiplicação ou 4 para divisão");
         int escolha = entrada.nextInt();
 
-        switch (escolha <= 4) {
+        switch (escolha) {
             case 1:
                 System.out.println("A soma é: " + (num1 + num2));
+                break;
             case 2:
                 System.out.println("A subtração é: " + (num1 - num2));
+                break;
             case 3:
                 System.out.println("A multiplicação é: " + (num1 * num2));
+                break;
             case 4:
-                System.out.println("A divisão é: " + (num1 / num2));
+                if (num2 != 0) {
+                    System.out.println("A divisão é: " + (num1 / num2));
+                } else {
+                    System.out.println("Não é possível dividir por zero.");
+                }
+                break;
+
             default:
                 System.out.println("escolha invalida");
         }
@@ -379,11 +388,62 @@ class exercicio15 {
 
         for (int i = 2; i <= Math.sqrt(numero); i++) {
             if (numero % i == 0) {
-                return false;
+                System.out.println("o número não é primo");
+                break;
             } else {
                 System.out.println("o número é primo");
+                break;
             }
         }
 
+    }
+}
+
+class exercicio16 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("escreva um número pra ver se ele é par ou impar");
+        int num = entrada.nextInt();
+        int resultado = num % 2;
+
+        switch (resultado) {
+            case 0:
+                System.out.println("o número é par");
+                break;
+
+            default:
+                System.out.println("o número é impar");
+                break;
+        }
+    }
+}
+
+class exercicio17 {
+    public static void main(String[] args) {
+        int valor = 0;
+
+        while (valor < 10) {
+            valor++;
+            System.out.println(valor);
+        }
+    }
+}
+
+class exercicio18 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int quantidade = 5;
+        int[] numeros = new int[quantidade];
+        int soma = 0;
+
+        for (int i = 0; i < quantidade; i++) {
+            System.out.println("Insira o número " + (i + 1) + " ");
+            numeros[i] = entrada.nextInt();
+            soma = +numeros[i];
+        }
+
+        double media = (double) soma / quantidade;
+        System.out.println("A média dos números é: " + media);
     }
 }
