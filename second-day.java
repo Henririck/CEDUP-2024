@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import java.util.Calendar;
 
 class quickstart {
     public static void main(String[] args) {
@@ -445,5 +446,21 @@ class exercicio18 {
 
         double media = (double) soma / quantidade;
         System.out.println("A média dos números é: " + media);
+    }
+}
+
+class exercicio19 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite um ano!");
+        int ano = entrada.nextInt();
+
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, ano);
+        if (cal.getActualMaximum(Calendar.DAY_OF_YEAR) > 365) {
+            System.out.println("O ano é bissexto");
+        } else {
+            System.out.println("O ano ano não é bissexto");
+        }
     }
 }
