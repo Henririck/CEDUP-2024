@@ -372,7 +372,7 @@ class exercicio14 {
     public static void main(String[] args) {
         int fatorial = 1;
 
-        for (int n = 1; n <= 10; n++) {
+        for (int n = 1; n <= 5; n++) {
             fatorial *= n;
             System.out.println(fatorial + " ");
         }
@@ -385,16 +385,19 @@ class exercicio15 {
         System.out.println("Escreva um número para ver se ele é primo");
         int numero = entrada.nextInt();
 
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
-            if (numero % i == 0) {
-                System.out.println("o número não é primo");
-                break;
-            } else {
-                System.out.println("o número é primo");
-                break;
+        if (numero == 1) {
+            System.out.println("o numero nao é primo");
+        } else {
+            for (int i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i == 0) {
+                    System.out.println("o número não é primo");
+                    break;
+                } else {
+                    System.out.println("o número é primo");
+                    break;
+                }
             }
         }
-
     }
 }
 
