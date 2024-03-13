@@ -86,12 +86,10 @@ class exercise3 {
         System.out.println("insira um nome: ");
         String nome = entrada.nextLine();
 
-        entrada.close();
-
         System.out.println("Insira um sobrenome");
         String nome1 = entrada.nextLine();
 
-        nome1.close();
+        entrada.close();
 
         Scanner entrada2 = new Scanner(System.in);
         System.out.println("insira um parâmetro: ");
@@ -266,7 +264,7 @@ class pscina {
 
         entrada.close();
 
-        preco = 100 * (largura * altura * comprimento);
+        preco = 100 * (largura * profundidade * comprimento);
 
         System.out.println("o preço ficaria " + preco);
     }
@@ -462,5 +460,38 @@ class exercicio19 {
         } else {
             System.out.println("O ano ano não é bissexto");
         }
+    }
+}
+
+class exercicio20 {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite 1 para F, 2 para K, 3 para Re ou 4 para Ra");
+        int escolha = entrada.nextInt();
+
+        System.out.println("Escreva uma temperatura em celsius");
+        double C = entrada.nextDouble();
+
+        double F = C * 1.8 + 32, K = C + 273.15, Re = C * 0.8, Ra = C * 1.8 + 32 + 459.67;
+
+        switch (escolha) {
+            case 1:
+                System.out.println("A conversão em F é: " + F);
+                break;
+            case 2:
+                System.out.println("A conversão em F é: " + K);
+                break;
+            case 3:
+                System.out.println("A conversão em F é: " + Re);
+                break;
+            case 4:
+                System.out.println("A conversão em F é: " + Ra);
+                break;
+            default:
+                break;
+        }
+
     }
 }
